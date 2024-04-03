@@ -24,6 +24,11 @@ let notes = [
       id: 3,
       content: "GET and POST are the most important methods of HTTP protocol",
       important: true
+  },
+  {
+    id: 4,
+    content: "sussus amogus",
+    important: true
   }
 ]
 
@@ -63,9 +68,7 @@ app.post('/api/notes', (request, response) => {
       error: "content missing"
     })
   }  
-
-  console.log(Boolean(''))
-  
+    
   const note = {
     id: notes.length + 1,
     important: Boolean(body.important),
