@@ -11,7 +11,7 @@ const password = process.argv[2]
 console.log(password)
 
 const url =
- `mongodb+srv://richardo:${password}@cluster0.uyqs1nl.mongodb.net/noteApp?retryWrites=true&w=majority&appName=Cluster0`
+ `mongodb+srv://richardo:${password}@cluster0.uyqs1nl.mongodb.net/testNoteApp?retryWrites=true&w=majority&appName=Cluster0`
 
 mongoose.set('strictQuery',false)
 
@@ -32,10 +32,10 @@ noteSchema.set('toJSON', {
 
 const Note = mongoose.model('Note', noteSchema)
 
-const note = new Note({
-  content: 'bye bye 🤫',
-  important: false,
-})
+// const note = new Note({
+//   content: 'hi hi 👋',
+//   important: true,
+// })
 
 // note.save().then(result => {
 //   console.log(result)
